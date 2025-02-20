@@ -1,0 +1,291 @@
+/* Prevents horizontal scrolling */
+body {
+    background-image: url(botw\ menu\ screen.jpg);
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    background-attachment: fixed;
+    overflow-x: hidden; /* Disables horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+
+
+/* Black overlay */
+.black-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+/* Homepage content */
+.homepage-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Title */
+.homepage-title {
+    font-size: 80px;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 20px;
+}
+
+/* Intro text */
+.homepage-text {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* CTA Button */
+.explore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background: lightskyblue;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: darkgoldenrod;
+}
+
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.zelda-menu {
+    background: linear-gradient(135deg, #0a69b3, #1e90ff);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px 32px;
+    border: 2px solid #88c0d0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.zelda-menu:hover {
+    background: linear-gradient(135deg, #1e90ff, #5cadff);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(10, 105, 179, 0.95);
+    border: 2px solid #88c0d0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    transition: background 0.3s ease-in-out;
+    font-size: 22px;
+}
+
+.dropdown a:hover {
+    background: #1e90ff;
+}
+
+/* Show menu when button is clicked */
+.menu-container:hover .dropdown {
+    display: block;
+}
+
+/* ========== Lore Page Layout ========== */
+.lore-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.lore-section {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Increased h2 Font Size */
+.lore-section h2 {
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    font-size: 80px;
+}
+
+
+/* Images inside Lore Sections */
+.lore-section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 2px solid lightskyblue;
+    margin: 15px 0;
+}
+
+.lore-section p {
+    font-size: 1.4rem;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+    text-align: center;
+
+    /* Full-width text block touching margins */
+    width: 100%;
+    box-sizing: border-box; /* Prevents overflow from padding */
+    margin: 20px auto;
+    padding: 15px 30px; /* Adds padding while ensuring full-width */
+
+    /* Border and background overlay */
+    border: 2px solid #88c0d0; /* Light blue border */
+    background: rgba(0, 0, 0, 0.8); /* Darker black overlay for better contrast */
+    border-radius: 0; /* Removes border rounding to fit the edges */
+}
+
+/* ========== Character Page Fixes ========== */
+/* Centers character sections */
+.character-section {
+    text-align: center; /* Centers all content in the section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image */
+    width: 100%;
+}
+
+/* Centers character images */
+.character-section img {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    width: 100%;
+    max-width: 800px; /* Adjust size for consistency */
+    border-radius: 10px;
+    border: 3px solid #0d5eaf; /* Link's Champion Tunic Blue */
+}
+
+/* Fixes paragraph placement and styling */
+.character-section p {
+    font-size: 1.4rem;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+    text-align: center;
+
+    /* Full-width text block touching margins */
+    width: 80%;
+    box-sizing: border-box; /* Prevents overflow from padding */
+    margin: 20px auto;
+    padding: 15px 30px; /* Adds padding while ensuring full-width */
+
+    /* Border and background overlay */
+    border: 2px solid #88c0d0; /* Light blue border */
+    background: rgba(0, 0, 0, 0.8); /* Darker black overlay for better contrast */
+    border-radius: 0; /* Removes border rounding to fit the edges */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 5px; /* No gap between images */
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 650px; /* Image size */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid lightblue; /* Light blue border */
+}
+
+.gallery-item {
+    text-align: center; /* Centers the text under each image */
+    margin-bottom: 20px; /* Adds space between the images */
+}
+
+.image-text {
+    font-size: 65px;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+}
+
+.goty-title {
+    text-align: center;
+    font-size: 100px;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    margin-top: 20px;
+}
+
+.goty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    border-radius: 10px;
+}
+
+.goty-images {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 20px; /* Adds space between images */
+    margin-bottom: 20px;
+}
+
+.goty-images img {
+    width: 150%;
+    max-width: 600px;
+    height: auto;
+    border: 3px solid lightskyblue;
+    border-radius: 10px;
+}
+
+.goty-container p {
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.calamity-ganon {
+    grid-column: span 2; /* Makes it take up both columns */
+    justify-self: center; /* Centers it within the grid */
+}
+
+
+
+
